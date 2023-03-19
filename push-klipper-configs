@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-rsync -a klipper-config/ ender3v21.75*200:~/printer_data/config/
+read -p "Are you sure you want to push Klipper configuration? [yN]" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  rsync -a klipper-config/ ender3v2.local:~/printer_data/config/
+fi
