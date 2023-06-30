@@ -1,2 +1,7 @@
 .history
 .moonraker.conf.bkp
+
+super-slicer/cache
+super-slicer/sla_*
+super-slicer/snapshots
+super-slicer/ui_layout
