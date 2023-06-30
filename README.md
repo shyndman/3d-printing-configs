@@ -1,1 +1,3 @@
-# ender3v2
+# 3D printing configs
+
+Klipper and SuperSlicer configuration files
