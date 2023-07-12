@@ -1,5 +1,6 @@
 .history
 .moonraker.conf.bkp
+.vscode
 
 super-slicer/cache
 super-slicer/sla_*
