@@ -22,15 +22,17 @@ class PerPrintPressureAdvance:
 
         # Pressure advance
         if nozzle_size == "0.2":
-            pa = 0.9
+            pa = 0.09
         elif nozzle_size == "0.3":
-            pa = 0.8
+            pa = 0.08
         elif nozzle_size == "0.4":
-            pa = 0.7
+            pa = 0.07
         elif nozzle_size == "0.5":
-            pa = 0.6
+            pa = 0.06
         elif nozzle_size == "0.6":
-            pa = 0.5
+            pa = 0.055
+        elif nozzle_size == "0.8":
+            pa = 0.035
         else:
             gcmd.respond_info(
                 "SET_PRINT_PRESSURE_ADVANCE called with unsupported NOZZLE {nozzle}".format(
@@ -41,6 +43,11 @@ class PerPrintPressureAdvance:
 
         smoothing = 0.02
 
+        gcmd.respond_info(
+            "Setting pressure advance to {pa}s, over {smoothing}s".format(
+                pa=pa, smoothing=smoothing
+            )
+        )
         extruder = self.printer.lookup_object("toolhead").get_extruder()
         extruder.extruder_stepper._set_pressure_advance(pa, smoothing)
 
