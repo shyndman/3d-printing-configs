@@ -22,11 +22,11 @@ class PerPrintPressureAdvance:
 
         # Pressure advance
         if nozzle_size == "0.2":
-            pa = 0.09
+            pa = 0.10
         elif nozzle_size == "0.3":
-            pa = 0.08
+            pa = 0.09
         elif nozzle_size == "0.4":
-            pa = 0.07
+            pa = 0.078
         elif nozzle_size == "0.5":
             pa = 0.06
         elif nozzle_size == "0.6":
