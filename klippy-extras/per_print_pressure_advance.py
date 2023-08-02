@@ -22,17 +22,17 @@ class PerPrintPressureAdvance:
 
         # Pressure advance
         if nozzle_size == "0.2":
-            pa = 0.10
+            pa = 0.100
         elif nozzle_size == "0.3":
-            pa = 0.09
+            pa = 0.095
         elif nozzle_size == "0.4":
-            pa = 0.078
+            pa = 0.086
         elif nozzle_size == "0.5":
-            pa = 0.06
+            pa = 0.060
         elif nozzle_size == "0.6":
             pa = 0.055
         elif nozzle_size == "0.8":
-            pa = 0.035
+            pa = 0.020
         else:
             gcmd.respond_info(
                 "SET_PRINT_PRESSURE_ADVANCE called with unsupported NOZZLE {nozzle}".format(
