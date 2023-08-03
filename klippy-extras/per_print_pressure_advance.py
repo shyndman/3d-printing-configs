@@ -26,7 +26,7 @@ class PerPrintPressureAdvance:
         elif nozzle_size == "0.3":
             pa = 0.095
         elif nozzle_size == "0.4":
-            pa = 0.086
+            pa = 0.082
         elif nozzle_size == "0.5":
             pa = 0.060
         elif nozzle_size == "0.6":
@@ -41,7 +41,7 @@ class PerPrintPressureAdvance:
             )
             return
 
-        smoothing = 0.02
+        smoothing = 0.03
 
         gcmd.respond_info(
             "Setting pressure advance to {pa}s, over {smoothing}s".format(
