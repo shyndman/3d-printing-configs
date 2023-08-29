@@ -41,8 +41,8 @@ class PerPrintPressureAdvance:
             )
             return
 
-        pa *= gcmd.getfloat("ADJUST_FACTOR", default=1.0)
-
+        # Perform a per-filament adjustment if requested
+        pa *= gcmd.get("ADJUST_FACTOR", parser=float, default=1.0)
 
         smoothing = 0.03
 
