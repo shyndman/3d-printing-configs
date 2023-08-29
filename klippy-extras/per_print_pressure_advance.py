@@ -41,6 +41,9 @@ class PerPrintPressureAdvance:
             )
             return
 
+        pa *= gcmd.getfloat("ADJUST_FACTOR", default=1.0)
+
+
         smoothing = 0.03
 
         gcmd.respond_info(
