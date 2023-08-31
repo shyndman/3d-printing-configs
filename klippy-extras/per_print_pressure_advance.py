@@ -32,7 +32,7 @@ class PerPrintPressureAdvance:
         elif nozzle_size == "0.6":
             pa = 0.055
         elif nozzle_size == "0.8":
-            pa = 0.020
+            pa = 0.040
         else:
             gcmd.respond_info(
                 "SET_PRINT_PRESSURE_ADVANCE called with unsupported NOZZLE {nozzle}".format(
