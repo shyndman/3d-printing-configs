@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rsync -a ender3v2.local:~/printer_data/config/ klipper-config/
+rsync -a ender3v2.local:~/printer_data/config/ klipper-config/ender3v2
