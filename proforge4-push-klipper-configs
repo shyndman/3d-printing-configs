@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+read -p "Are you sure you want to push Klipper configuration? [yN]" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  rsync -a klipper-config/proforge4 proforge4.local:~/printer_data/config/
+  rsync -a klippy-extras/ proforge4.local:~/klipper/klippy/extras/
+fi
