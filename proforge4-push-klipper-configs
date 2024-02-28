@@ -5,5 +5,6 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   rsync -a klipper-config/proforge4/ proforge4.local:~/printer_data/config/
+  rsync -a klipper-config/shared/macros/ proforge4.local:~/printer_data/config/macros/shared
   rsync -a klippy-extras/ proforge4.local:~/klipper/klippy/extras/
 fi
